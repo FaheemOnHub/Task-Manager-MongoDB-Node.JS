@@ -1,58 +1,57 @@
-**Task Manager Web App**
+## Task Manager Web App
 
 This is a simple Task Manager web application built using Node.js and MongoDB. It allows users to perform CRUD (Create, Read, Update, Delete) operations on tasks.
-Features
 
-    Create: Users can create new tasks with a name and optional completion status.
-    Read: Users can view all tasks or retrieve a specific task by its ID.
-    Update: Users can update the name or completion status of a task.
-    Delete: Users can delete a task by its ID.
+**Features:**
 
-Technologies Used
+* **Create:** Add new tasks with names and optional completion status.
+* **Read:** View all tasks or retrieve specific ones by their ID.
+* **Update:** Modify task names or completion status.
+* **Delete:** Remove tasks by their ID.
 
-    Node.js: The backend of the application is built using Node.js, which provides the runtime environment for JavaScript.
-    Express.js: Express.js is used as the web application framework for Node.js, simplifying the creation of APIs and handling HTTP requests.
-    MongoDB: MongoDB is used as the database to store tasks. It's a NoSQL database, providing flexibility and scalability.
-    Mongoose: Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js, providing a straightforward schema-based solution for modeling application data.
-    dotenv: The dotenv module is used to load environment variables from a .env file into process.env, facilitating the management of sensitive information like database URIs.
-    morgan: Morgan is used as a middleware for logging HTTP requests.
-    RESTful API: The application follows RESTful principles to provide a clear and predictable API for interacting with tasks.
+**Technologies:**
 
-Installation
-Clone the repository:
-git clone https://github.com/FaheemOnHub/Task-Manager-MongoDB-Node.JS
+* **Backend:** Node.js provides the JavaScript runtime environment.
+* **Framework:** Express.js simplifies API creation and HTTP request handling.
+* **Database:** MongoDB offers a flexible and scalable NoSQL database for storing tasks.
+* **ODM:** Mongoose provides a schema-based approach to model task data efficiently.
+* **Environment Variables:** The dotenv module securely manages sensitive information like database URIs.
+* **Logging:** Morgan logs HTTP requests for better monitoring.
+* **API Design:** RESTful principles ensure a clear and predictable API for interacting with tasks.
 
-Install dependencies:
+**Getting Started:**
 
-bash
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/FaheemOnHub/Task-Manager-MongoDB-Node.JS
+   ```
+2. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Set Up Environment Variables:**
+   Create a `.env` file in the root directory and add:
+   ```
+   MONGO_URI=your_mongodb_uri
+   ```
+4. **Start the Server:**
+   ```bash
+   npm start
+   ```
+5. **Access the Application:** Visit http://localhost:3000 in your browser.
 
-npm install
+**API Endpoints:**
 
-Set up environment variables:
+* **GET /api/v1/tasks:** Get all tasks.
+* **POST /api/v1/tasks:** Create a new task.
+* **GET /api/v1/tasks/:id:** Get a specific task by ID.
+* **PATCH /api/v1/tasks/:id:** Update a task by ID.
+* **DELETE /api/v1/tasks/:id:** Delete a task by ID.
 
-Create a .env file in the root directory and add the following variables:
-
-MONGO_URI=your_mongodb_uri
-
-Start the server:
-
-bash
-
-    npm start
-
-    Access the application at http://localhost:3000 in your browser.
-
-API Endpoints
-
-    GET /api/v1/tasks: Retrieves all tasks.
-    POST /api/v1/tasks: Creates a new task.
-    GET /api/v1/tasks/:id: Retrieves a specific task by its ID.
-    PATCH /api/v1/tasks/:id: Updates a task by its ID.
-    DELETE /api/v1/tasks/:id: Deletes a task by its ID.
-
-Contributing
+**Contributing:**
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
-License
+
+**License:**
 
 This project is licensed under the MIT License. See the LICENSE file for details.
